@@ -1,92 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="UTF-8">
+</head>
+<body>
+	
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script> 
 <script>
-$('.username').html('Joan');
-
+	$('.username').html('JoAnonyme');
+	$('#article_jo input').on('click', function() {
+		$(this).select();
+	});
 </script>
+
 <style type="text/css" media="screen">
-	.jo_tabulation {
+	#article_jo {
+		width: 500px;
+		text-align: justify;
+	}
+
+	#article_jo .jo_tabulation {
 		text-indent: 3em;
 	}
-	.jo_centrer {
+	#article_jo .jo_centrer {
 		display: block;
 		width: 100%;
 		text-align: center;
 	}
-	.jo_code {
-		padding: 3px;
+	#article_jo .jo_code {
+		padding: 8px;
 		background-color: #333232;
 		color: #fff;
+		width: 350px;
+		border: none;
+	}
+
+	#article_jo a {
+		color: rgb(42, 119, 179);
+		text-decoration: none;
+	}
+
+	#article_jo a:hover {
+		color: rgb(30, 95, 140);
+		text-decoration: none;
+	}
+
+	#article_jo a::after {
+		content: ' ↑';
+	}
+
+	#article_jo ul {
+		list-style-type: none;
+	}
+
+	#dockerLol {
+		width: 110px;
+		transform: scaleX(-1);
+	}
+	#dokerDance {
+		width: 100%;
+	}
+	#dockerBan {
+		width: 100%;
+	}
+
+	.blockimgleft img {
+		float: left;
+		margin-right: 10px;
+	}
+	#jo_screenshot {
+		width: 100%;
 	}
 </style>
+
+<div id="article_jo">
+	<img id="dockerBan" src="https://i.gyazo.com/dc97d34d8bf0c78cb658647c72de73c2.png" alt="Bannière docker pour l'article, c'est deux images libres mises enssembles (NOCOPYRIGHT)">
+	<h2>Wtf is this ?</h2>
+	<p class="jo_tabulation">Un p’tit nouveau de la virtualisation de machines a débarqué le 13 Septembre 2013, dans le monde du logiciel libre. Après huit mois de partage, il atteint le top 20 des projets les plus populaires sur GitHub. Sous le curieux nom de Docker se cache l’outil le plus performant à l’heure actuelle pour héberger un site web personnel, un serveur Git, un serveur de jeu ou tout autre programme de n'importe quelle envergure.</p>
+
+	<img id="dokerDance" src="https://i.gyazo.com/b83acbfeb916a923fa52585c13613577.png" alt="Docker Dance !">	
+
+	<p class="jo_tabulation">C’est M. Salomon Hykes, un créateur d’entreprise né en 1983, qui a créé docker pour la société dotCloud. Docker permet d’isoler des systèmes complexes (comme un serveur par exemple) à l’aide d’une <a target="_blank" href="https://fr.wikipedia.org/wiki/Interface_de_programmation">API</a> de haut niveau.</p>
+
+	<p class="jo_tabulation">Docker est de plus en plus utilisé aussi bien par les particuliers, amateurs de technologies que par les entreprises privées ou publiques.</p>
+
+
+	<h2>Pourquoi Docker ?</h2>
+	<p class="jo_tabulation">Ses principaux atouts sont que Docker est capable de lancer une machine Linux et tous les programmes que tu désires en une durée record ! Toutes les instances de serveur sont gérées à l’intérieur de conteneurs indépendants.</p>
+
+	<p class="jo_tabulation blockimgleft">
+		<img id="dockerLol" src="https://i.gyazo.com/fb1ea6f9f22bf2be7679ab8f8c680248.png" alt="DockerLol">
+		Ainsi, tu peux démarrer un serveur web, une base de données ou un serveur Git en un rien de temps. Mais ce qui est encore plus fort, c’est qu’après quelques mauvaises manipulations de la part d’un utilisateur débutant, d’un virus, ou d’une CyberAttaque Chinoise, le serveur peut être restauré à l’identique en un rien de temps. Et tout est indépendant du système qui exécute l’instance de Docker.
+	</p>
 	
-</style>
-<img src="https://i.gyazo.com/dc97d34d8bf0c78cb658647c72de73c2.png" alt="Bannière docker, c'ets deux images libres mises enssembles (#PAS DE COPYRIGHT SISI)">
-<h2>Wtf is this ?</h2>
-<p class="jo_tabulation">Un p’tit nouveau de la virtualisation de machines à débarqué le 13 Septembre 2013, dans le monde du logiciel libre. Après 8 mois de partage, il atteint le top 20 des projets les plus populaires sur GitHub. Sous le curieux nom de Docker se cache l’outil le plus performant à l’heure actuelle pour héberger un site web personnel, un serveur git, un serveur de jeu ou tout autre programme de n'importe quelle envergure.</p>
-
-<p class="jo_tabulation">C’est M. Salomon Hykes un créateur d’entreprise né en 1983 qui a créé docker pour société dotCloud. Docker permet d’isoler des systèmes complexes (comme un serveur par exemple) à l’aide d’une API de haut niveau.</p>
+	<p class="jo_tabulation">Ainsi, tu peux passer ton projet du stade de développement à la production, par le biais d’un simple copié collé, tout est transparent et géré par Docker. L'environnement de développement peut être strictement identique à la production. Fini la galère pour configurer un envoi de mail, ou passer en HTTPS.</p>
 
 
-<p class="jo_tabulation">Docker est de plus en plus utilisé aussi bien par les particuliers, amateurs de technologies que par les entreprises privées ou publiques.</p>
+	<i class="jo_centrer">Mais pour faire tout ça, tu vas devoir apprendre à configurer ton docker.</i>
 
 
-<h2>Pourquoi Docker ?</h2>
-<p class="jo_tabulation">Ses principaux atouts sont que Docker est capable de lancer une machine Linux et tous les programmes que tu désires en une durée record ! Toutes les instances de serveur sont gérées à l’intérieur de conteneurs indépendants.</p>
+	<h2>Mon premier Docker</h2>
 
-<p class="jo_tabulation">Ainsi, tu peux démarrer un serveur web, une base de donnée ou un serveur git en un rien de temps. Mais ce qui est encore plus fort, c’est qu’après quelques mauvaises manipulations de la part d’un utilisateur débutant, d’un virus, ou d’une CyberAttaque Chinoise, le serveur peut être restauré à l’identique en un rien de temps. Et tout est indépendant du système qui exécute l’instance de Docker.</p>
+	<p class="jo_tabulation">Envie d’essayer ? Si tu as une connexion internet, en 10 minutes votre serveur Web peut tourner sur votre machine grâce à Docker.
+	Pour cela, il suffit d’installer Docker en le téléchargeant à l’adresse : <a target="_blank" href="https://www.docker.com/products/docker#/">https://www.docker.com/products/docker#/</a>.
+	</p>
 
+	<p class="jo_tabulation">Que tu sois sous Linux, Mac, ou encore Windows, peu importe, il est multiplateforme.
+	Il suffit ensuite de l’installer.</p>
 
-<p class="jo_tabulation">Ainsi, tu peux passer ton projet du stade de développement à la production, par le biais d’un simple copié collé, tout est transparent et géré par Docker.</p>
+	<img id="jo_screenshot" src="https://i.gyazo.com/8fb39c4dab7cae39ac5400c7d7e1e679.png" alt="Docker Config">
 
+	<p class="jo_tabulation">Maintenant que le démon Docker tourne sur votre machine, il va falloir taper de la ligne de commande.
+	Pour cela, un simple terminal suffira.</p>
+	<p class="jo_tabulation">Il te suffit d’y executer la commande suivante :</p>
 
-<i class="Jo_centrer">Mais pour faire tout ça, tu allez devoir apprendre à configurer ton docker.</i>
+	<input class="jo_code" value="docker run -d -p 80:80 --name webserver nginx" type="text">
 
+	<p class="jo_tabulation">Et d’aller sur la page <a target="_blank" href="http://localhost">http://localhost</a>
+	Docker vient de te lancer un serveur Web utilisant nginx (Un serveur web léger et performant).</p>
 
-<h2>Mon premier Docker<h2>
-
-<img src="https://i.gyazo.com/8fb39c4dab7cae39ac5400c7d7e1e679.png" alt="Docker Config">
-
-<p class="jo_tabulation">Envie d’essayer ? Si vous avez une connexion internet, en 10 minutes votre serveur Web peut tourner sur votre machine grâce à Docker.
-Pour cela, il suffit d’installer Docker en le téléchargeant à l’adresse : https://www.docker.com/products/docker#/
-</p>
-
-<p class="jo_tabulation">Que tu sois sous Linux, Mac, ou encore Windows, peu importe, il est multiplateforme.
-Il suffit ensuite de l’installer.</p>
-<p class="jo_tabulation">Maintenant que le démon Docker tourne sur votre machine, il va falloir taper de la ligne de commande.
-Pour cela, un simple terminal suffira.</p>
-<p class="jo_tabulation">Il vous suffit d’y lancer la commande suivante :</p>
-
-<span class="jo_code">docker run -d -p 80:80 --name webserver nginx</span>
-
-<p class="jo_tabulation">Et d’aller sur la page http://localhost
-Docker vient de vous lancer un serveur Web utilisant nginx (Un serveur web léger et performant).</p>
-
-<i class="Jo_centrer">Maintenant il ne vous reste plus qu’à configurer votre serveurs en apprenant le langage de configuration de Docker.</i>
+	<i class="jo_centrer">Maintenant il ne te reste plus qu’à configurer ton serveur en t'initiant au langage de configuration de Docker.</i>
 
 
-<h2>Je ne veux pas apprendre à configurer mon Docker</h2>
+	<h2>Je ne veux pas apprendre à configurer mon Docker</h2>
 
 
-<p class="jo_tabulation">Dans ce cas, honte à toi. Mais comme tout projet libre, des Dockers ça se partage !
-Alors rendez-vous sur le hub officiel de Docker : https://hub.docker.com/ et trouve ton plaisir parmi les milliers de Dockers pré-configurés qui répondront à tes attentes.</p>
+	<p class="jo_tabulation">Dans ce cas, honte à toi. Mais comme tout projet libre, des Dockers ça se partage !
+	Alors rends toi sur le hub officiel de Docker : <a target="_blank" href="https://hub.docker.com/">https://hub.docker.com/</a> et trouve ton plaisir parmi les milliers de Dockers pré-configurés qui répondront à tes attentes.</p>
 
 
+	<h2>Pour conclure</h2>
 
-<h2>Pour aller plus loin :</h2>
-<ul>
-<li>ocumentation officielle de Docker : https://docs.docker.com</li>
-<li>Article complet détaillant son utilisation : https://www.wanadev.fr/23-tuto-docker-comprendre-docker-partie1/</li>
-</ul>
+	<p>Si Docker t'interesse, fonce dans le tas. Les notions de bases sont difficiles à assimiler, mais une fois maîtrisé Docker te permettra de gagner en souplesse et en rapidité de déploiement.</p>
 
-<h3>Sources :</h3>
-<ul>
-	<li>https://www.docker.com/</li>
-	<li>http://korben.info/tag/developper-avec-docker</li>
-	<li>http://www.lemondeinformatique.fr/tout-savoir-sur-docker.html</li>
-	<li>https://doc.ubuntu-fr.org/docker</li>
-	<li>http://putaindecode.io/fr/articles/docker/</li>
-	<li>https://fr.wikipedia.org/wiki/Docker_(logiciel)</li>
-	<li>https://fr.wikipedia.org/wiki/Nginx</li>
-	<li>https://fr.wikipedia.org/wiki/Solomon_Hykes</li>
-</ul>
 
+	<h2>Pour aller plus loin :</h2>
+	<ul>
+		<li>Documentation officielle de Docker : <a target="_blank" href="https://docs.docker.com">https://docs.docker.com</a></li>
+		<li>Documentation en Français présentant Docker en détail : <a target="_blank" href="https://www.wanadev.fr/23-tuto-docker-comprendre-docker-partie1/">https://www.wanadev.fr</a></li>
+	</ul>
+
+	<h3>Sources :</h3>
+	<ul>
+		<li><a target="_blank" href="https://www.docker.com/">Docker</a></li>
+		<li><a target="_blank" href="http://www.journaldunet.com/solutions/cloud-computing/1146290-cloud-pourquoi-docker-peut-tout-changer/">Journaldunet</a></li>
+		<li><a target="_blank" href="http://korben.info/tag/developper-avec-docker">Korben</a></li>
+		<li><a target="_blank" href="http://www.lemondeinformatique.fr/tout-savoir-sur-docker.html">Lemondeinformatique</a></li>
+		<li><a target="_blank" href="https://doc.ubuntu-fr.org/docker">Ubuntu</a></li>
+		<li><a target="_blank" href="http://putaindecode.io/fr/articles/docker/">Putaindecode</a></li>
+		<li><a target="_blank" href="https://webikeo.fr/webinar/developpement-applicatif-la-revolution-avec-docker-2">Webikeo</a></li>
+		<li><a target="_blank" href="https://fr.wikipedia.org/wiki/Docker_(logiciel)">Wikipedia - Docker (logiciel)</a></li>
+		<li><a target="_blank" href="https://fr.wikipedia.org/wiki/Nginx">Wikipedia - Nginx</a></li>
+		<li><a target="_blank" href="https://fr.wikipedia.org/wiki/Solomon_Hykes">Wikipedia - Solomon Hykes</a></li>
+		<li><a target="_blank" href="http://www.7avoir.net/tag/docker/">7avoir</a></li>
+	</ul>
+
+	<p>
+	Cet article est sous Licence <a target="_blank" href="https://fr.wikipedia.org/wiki/Licence_CC0">CC0</a>. Les images sont tirées du site <a target="_blank" href="https://stocksnap.io/">Stocksnap</a> et <a target="_blank" href="https://fr.wikipedia.org/wiki/Docker_(logiciel)#/media/File:Docker_(container_engine)_logo.svg">Wikipedia</a>.
+	</p>
+</div>
+
+</body>
+</html>
